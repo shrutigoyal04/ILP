@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="drawing-canvas" width="1000px"></canvas>
+
+    <script>
+        const canvas = document.getElementById("drawing-canvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(10,10,150,100);
+
+        ctx.fillStyle = "pink";
+        ctx.fillRect(180,10,150,100);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(340,10,150,100);
+        
+        ctx.fillStyle = "red";
+        ctx.fillRect(500,10,150,100);
+    </script>
+</body>
+</html>

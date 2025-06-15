@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script>
+        const handleSubmit =(submitEvent)=>{
+            const form = document.getElementById("registrationForm");
+
+            submitEvent.preventDefault();
+            const formData = new FormData(form);
+
+            console.log(Object.fromEntries(formData));
+            alert(JSON.stringify(Object.fromEntries(formData),null,2))
+        }
+    </script>
+</head>
+<body>
+    <form action="" id="registrationForm" onsubmit="return handleSubmit(event)">
+        <h2>Registration form</h2>
+
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName">
+        </div>
+
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone">
+        </div>
+
+        <div>
+            <label for="gender">Gender:</label><br>
+            <span>
+                <label style="user-select: none">
+                 <input type="radio" name="gender" value="male">
+                  Male
+                </label>
+
+                <label style="user-select: none">
+                 <input type="radio" name="gender" value="female">
+                  Female
+                </label>
+
+                <label style="user-select: none">
+                 <input type="radio" name="gender" value="notsay">
+                  Prefer not to say
+                </label>
+            </span>
+        </div>
+
+        <div>
+            <label for="receiveEmails">Do you want to receive emails</label>
+            <input type="checkbox" name="receiveEmails">
+        </div>
+
+        <div>
+            <label for="country">Country</label>
+            <select name="country">
+                <option selected disabled>--Select Country--</option>
+                <option value="ind">India</option>
+                <option value="nep">Nepal</option>
+                <option value="bhu">Bhutan</option>
+                <option value="ban">Bangladesh</option>
+                <option value="sri">Sri Lanka</option>
+            </select>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
