@@ -40,7 +40,7 @@
 //     failure();
 //   }
 // }
-// ///////////bht hi confusing h ye h callback hell
+////callback hell//////////
 // saveToDb(
 //   "shruti",
 //   () => {
@@ -61,8 +61,7 @@
 // );
 
 
-/////promise ek object hota h jo success or failure ki value ko store krte h 
-
+///////////promise//////////
 // function saveToDb(data) {
 //     return new Promise((resolve,reject)=>{
 //         let internetSpeed = Math.floor(Math.random() * 10) + 1;
@@ -85,7 +84,7 @@
 //     console.log(request)
 // })
 
-////isko or compact form me aise likh skte h 
+////more compact form///////////
 
 // saveToDb("shruti")
 // .then(()=>{
