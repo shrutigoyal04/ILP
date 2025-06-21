@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
