@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+   web1:
+      build:
+        context: ./
+      restart: 'no'  
+      ports:
+        - '8081:8081'
+
+   web2:
+      build:
+        context: ./
+      restart: always 
+      ports:
+        - '8082:8081'
+
+   web3:
+      build:
+        context: ./
+      restart: unless-stopped  
+      ports:
+        - '8083:8081' 
+
+   web4:
+      build:
+        context: ./
+      restart: on-failure  
+      ports:
+        - '8084:8081'   
+
+   redis_server:
+       image: 'redis'             

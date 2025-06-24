@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@redis/client": "^5.5.6",
+    "express": "*",
+    "redis": "^5.5.6"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
