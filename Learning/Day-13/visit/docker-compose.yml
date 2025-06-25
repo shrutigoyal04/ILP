@@ -4,6 +4,9 @@ services:
    web1:
       build:
         context: ./
+      volumes:
+        -/app/node_modules  
+        - /:/app
       restart: 'no'  
       ports:
         - '8081:8081'
